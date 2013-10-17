@@ -26,9 +26,11 @@ class WordGroup extends FlxSpriteGroup {
             text.alignment = "center";
             text.size = size - 8;
             text.color = FlxColor.BLACK;
+            text.forceComplexRender = true;
             text.moves = true;
             var sprite:FlxSprite = new FlxSprite(x, y);
             sprite.loadGraphic(letterBackgroundBitmap);
+            sprite.forceComplexRender = true;
             backgrounds.push(sprite);
             add(sprite);
             texts.push(text);
